@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="CustomSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_inset</item>
+        <item name="android:windowSplashScreenBackground">#F9F9F9</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/ic_route</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.IslamiApp</item>
+    </style>
+
+
+</resources>
