@@ -11,6 +11,7 @@ import com.training.islamiapp.ui.utils.Constants
 class QuranFragment : Fragment() {
 
     private lateinit var binding: FragmentQuranBinding
+    private lateinit var chaptersAdapter: ChaptersAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,12 +19,18 @@ class QuranFragment : Fragment() {
     ): View {
         binding = FragmentQuranBinding.inflate(inflater, container, false)
 
-
-        binding.rvChapters.adapter = ChaptersAdapter(Constants.chapters)
-
-
-
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initChaptersRecyclerView()
+
+    }
+
+    private fun initChaptersRecyclerView() {
+        chaptersAdapter = ChaptersAdapter(Constants.chapters)
+        binding.rvChapters.adapter = chaptersAdapter
     }
 
 }
