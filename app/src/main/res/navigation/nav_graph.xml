@@ -9,7 +9,11 @@
         android:id="@+id/quranFragment"
         android:name="com.training.islamiapp.ui.screens.home.frags.quran.QuranFragment"
         android:label="fragment_quran"
-        tools:layout="@layout/fragment_quran" />
+        tools:layout="@layout/fragment_quran" >
+        <action
+            android:id="@+id/action_quranFragment_to_chapterDetailsFragment"
+            app:destination="@id/chapterDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ahadethFragment"
         android:name="com.training.islamiapp.ui.screens.home.frags.ahadeth.AhadethFragment"
@@ -25,4 +29,9 @@
         android:name="com.training.islamiapp.ui.screens.home.frags.radio.RadioFragment"
         android:label="fragment_radio"
         tools:layout="@layout/fragment_radio" />
+    <fragment
+        android:id="@+id/chapterDetailsFragment"
+        android:name="com.training.islamiapp.ui.screens.chapter_details.ChapterDetailsFragment"
+        android:label="fragment_chapter_details"
+        tools:layout="@layout/fragment_chapter_details" />
 </navigation>

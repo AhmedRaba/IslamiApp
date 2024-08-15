@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.training.islamiapp.databinding.ItemSuraBinding
 import com.training.islamiapp.ui.model.Chapter
 
-class ChaptersAdapter(val chapters: List<Chapter>) :
+class ChaptersAdapter(val chapters: List<Chapter>, val onItemClick: (Chapter, Int) -> Unit) :
     RecyclerView.Adapter<ChaptersAdapter.ChaptersViewHolder>() {
 
 
@@ -28,6 +28,9 @@ class ChaptersAdapter(val chapters: List<Chapter>) :
         holder.binding.apply {
             tvChapterName.text = chapter.name
             tvChapterVerses.text = chapter.versesNumber.toString()
+            root.setOnClickListener {
+                onItemClick(chapter, position)
+            }
         }
 
     }
