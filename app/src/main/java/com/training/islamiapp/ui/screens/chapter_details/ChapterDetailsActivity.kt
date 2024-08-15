@@ -34,11 +34,8 @@ class ChapterDetailsActivity : AppCompatActivity() {
 
     }
 
-    fun readSuraFile() {
-
-        var reader: BufferedReader? = null
-
-        reader = BufferedReader(InputStreamReader(assets.open("quran/$suraNumber"), "UTF-8"))
+    private fun readSuraFile() {
+        var reader = BufferedReader(InputStreamReader(assets.open("quran/$suraNumber"), "UTF-8"))
 
         // do reading, usually loop until end of file reading
         var mLine = reader.readLine()
