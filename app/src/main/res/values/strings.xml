@@ -2,4 +2,13 @@
     <string name="app_name">Islami App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dhikrNumber">عدد التسبيحات</string>
+
+    <array name="azkarList">
+        <item>سبحان الله</item>
+        <item>الحمد الله</item>
+        <item>لا إله إلا الله الله</item>
+        <item>الله أكبر</item>
+    </array>
+
 </resources>
